@@ -18,10 +18,10 @@
 <body>
     <div class="login">
         <h1 class="text-center">Cadastro</h1>
-        <form class="needs-validation" action="">
+        <form id="form_register" class="needs-validation">
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Digite seu nome completo:</label>
-                <input class="form-control" type="text" id="text" required>
+                <input class="form-control" type="text" id="text">
             </div>
 
             <div class="form-group was-validated">
@@ -58,6 +58,15 @@
         crossorigin="anonymous"></script>
     <!--PyScript JS-->
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!--Script-->
+    <script>
+        const btn_submit = document.querySelector("#form_register")
+        btn_submit.addEventListener('submit',()=>{
+            var name = document.querySelector("#email").value;
+            console.log(name);
+
+        })
+    </script>
 </body>
 
 </html>
