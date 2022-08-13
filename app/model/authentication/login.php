@@ -11,18 +11,18 @@
 
     /*Verificar autenticação do usuário*/
     if(login(email:$email,password:$password)){
-        echo(<<<EOD
-            "<script>
+        echo <<<EOD
+            <script>
                 window.location.href='../../view/dashboard.php'
-            </script>")
-        EOD);
+            </script>)
+        EOD ;
     }else{
-        echo(<<<EOD
-            "<script>
+        echo <<<EOD
+            <script>
                 alert('E-mail e/ou senha incorretos');
-                window.location.href='../../index.php'
-            </script>")
-        EOD);
+               window.location.href='../../index.php'
+            </script>
+        EOD;
         
     }
 ?>

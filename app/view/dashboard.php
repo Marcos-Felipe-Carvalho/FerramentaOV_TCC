@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "../model/authentication/checkAuthentication.php"
+    include "../model/authentication/checkAuthentication.php";
 ?>
 
 <!DOCTYPE html>

@@ -15,17 +15,17 @@
     if(!isRegistered(email:$email)){
         insertUser(userName:$userName, profile:$profile, email:$email, password:$password);
         echo(<<<EOD
-            "<script>
+            <script>
                 alert('Usuário cadastrado com sucesso.');
                 window.location.href='../../index.php'
-            </script>")
+            </script>
         EOD);
     }else{
         echo(<<<EOD
-            "<script>
+            <script>
                 alert('Usuário já cadastrado no banco de dados');
                 window.location.href='../../view/register.php'
-            </script>")
+            </script>
         EOD);
     }
 ?>

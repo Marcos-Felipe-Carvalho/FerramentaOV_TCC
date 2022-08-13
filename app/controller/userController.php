@@ -16,7 +16,7 @@
         $infoUser -> execute([$email]);
         $contUser = $infoUser -> rowCount();
         return $contUser > 0 ? true:false;
-        disconnect();
+        disconnect(); //Encerra a conexão com o banco de dados
     }
 
      /*Função para fazer o login do usuário*/
@@ -32,13 +32,12 @@
                 $_SESSION['name'] = $info['name'];
                 $_SESSION['email'] = $info['email'];
                 $_SESSION['profile'] = $info['profile'];   
-                $_SESSION['profile'] = $info['profile']; 
                 $_SESSION['login'] = true;
             }
         }
         return $contUser > 0 ? true:false;
 
-        disconnect();
+        disconnect(); //Encerra a conexão com o banco de dados
     }
 
     /*Realizar o logout do usuário*/
