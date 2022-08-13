@@ -9,24 +9,22 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!--PyScript CSS-->
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <!--CSS-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
     <div class="login">
         <h1 class="text-center">Cadastro</h1>
-        <form id="form_register" class="needs-validation">
+        <form id="form_register" method="post" action="../model/insert/insertUser.php" class="needs-validation">
             <div class="form-group was-validated">
-                <label class="form-label" for="email">Digite seu nome completo:</label>
-                <input class="form-control" type="text" id="text">
+                <label class="form-label" for="userName">Digite seu nome completo:</label>
+                <input class="form-control" type="text" name="userName" id="userName">
             </div>
 
             <div class="form-group was-validated">
-                <label for="exampleFormControlSelect1">Perfil de acesso:</label>
-                <select class="form-control" id="exampleFormControlSelect1" required>
+                <label for="profileSelect">Perfil de acesso:</label>
+                <select class="form-control" id="profileSelect" required name="profile">
                     <option disabled selected>Selecione o perfil de acesso</option>
                     <option>Psicólogo/Orientador Vocacional</option>
                     <option>Entrevista/Orientado</option>
@@ -34,18 +32,18 @@
             </div>
 
             <div class="form-group was-validated">
-                <label class="form-label" for="email">Endereço de e-mail</label>
-                <input class="form-control" type="email" id="email" required>
+                <label class="form-label" for="email">Endereço de e-mail:</label>
+                <input class="form-control" type="email" name="email" id="email" required>
             </div>
 
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Senha de acesso</label>
-                <input class="form-control" type="password" id="password" required>
+                <input class="form-control" type="password" name="password" id="password" required>
             </div>
 
-            <input class="btn btn-success w-100" type="submit" value="CADASTRAR-SE">
+            <input class="btn btn-success w-100" type="submit" name="save" value="CADASTRAR-SE">
 
-            <p class="text-center register">Já possui cadastro?<a href="index.html"><span class="info-register">Fazer
+            <p class="text-center register">Já possui cadastro?<a href="../index.php"><span class="info-register">Fazer
                         login</span></a></p>
 
         </form>
@@ -56,8 +54,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <!--PyScript JS-->
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <!--Script-->
     <script>
         const btn_submit = document.querySelector("#form_register")
