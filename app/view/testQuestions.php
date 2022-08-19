@@ -15,24 +15,28 @@
     <title>Questões - Modelo Big Five</title>
 </head>
 <body>
-    <?php
-        foreach($infoTestQuestions as $question){
-            echo "<p>".$question["id_question"]." - ".$question["question"]."<br>";
-            echo "<input type='radio' id='tq_".$question["id_question"]."' name='tq_".$question["id_question"]."' value='Discordo totalmente'>";
-            echo "<label for='tq_".$question["id_question"]."'>Discordo totalmente</label><br>";
+    <form action="testeQ.php" method="POST">
+        <?php
+            foreach($infoTestQuestions as $key=>$question){
+                echo ($key+1)."<br><br>";
+                echo "<p>".($key+1)." - ".$question["question"]."<br>";
+                echo "<input type='radio' id='tq_".($key+1)."' name='tq_".($key+1)."' value='1'>";
+                echo "<label for='tq_".($key+1)."'>Discordo totalmente</label><br>";
 
-            echo "<input type='radio' id='tq_".$question["id_question"]."' name='tq_".$question["id_question"]."' value='Discordo'>";
-            echo "<label for='tq_".$question["id_question"]."'>Discordo</label><br>";
+                echo "<input type='radio' id='tq_".($key+1)."' name='tq_".($key+1)."' value='2'>";
+                echo "<label for='tq_".($key+1)."'>Discordo</label><br>";
 
-            echo "<input type='radio' id='tq_".$question["id_question"]."' name='tq_".$question["id_question"]."' value='Não concordo nem discordo'>";
-            echo "<label for='tq_".$question["id_question"]."'>Não concordo nem discordo</label><br>";
+                echo "<input type='radio' id='tq_".($key+1)."' name='tq_".($key+1)."' value='3'>";
+                echo "<label for='tq_".($key+1)."'>Não concordo nem discordo</label><br>";
 
-            echo "<input type='radio' id='tq_".$question["id_question"]."' name='tq_".$question["id_question"]."' value='Concordo'>";
-            echo "<label for='tq_".$question["id_question"]."'>Concordo</label><br>";
+                echo "<input type='radio' id='tq_".($key+1)."' name='tq_".($key+1)."' value='4'>";
+                echo "<label for='tq_".($key+1)."'>Concordo</label><br>";
 
-            echo "<input type='radio' id='tq_".$question["id_question"]."' name='tq_".$question["id_question"]."' value='Concordo totalmente'>";
-            echo "<label for='tq_".$question["id_question"]."'>Concordo totalmente</label><br>";
-        }
-    ?>
+                echo "<input type='radio' id='tq_".($key+1)."' name='tq_".($key+1)."' value='5'>";
+                echo "<label for='tq_".($key+1)."'>Concordo totalmente</label><br>";
+            }
+        ?>
+        <input type="submit" value="Salvar">
+    </form>
 </body>
 </html>
