@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 17, 2022 at 02:12 AM
+-- Generation Time: Aug 20, 2022 at 04:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -85,6 +85,69 @@ INSERT INTO `tb_test_questions` (`id_question`, `question`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_test_result`
+--
+
+CREATE TABLE `tb_test_result` (
+  `id_result` int(4) NOT NULL,
+  `id_user` int(4) NOT NULL,
+  `id_question` int(4) NOT NULL,
+  `result` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_test_result`
+--
+
+INSERT INTO `tb_test_result` (`id_result`, `id_user`, `id_question`, `result`) VALUES
+(160, 4, 1, 5),
+(161, 4, 2, 4),
+(162, 4, 3, 3),
+(163, 4, 4, 2),
+(164, 4, 5, 1),
+(165, 4, 6, 1),
+(166, 4, 7, 2),
+(167, 4, 8, 3),
+(168, 4, 9, 4),
+(169, 4, 10, 5),
+(170, 4, 11, 1),
+(171, 4, 12, 2),
+(172, 4, 13, 3),
+(173, 4, 14, 4),
+(174, 4, 15, 1),
+(175, 4, 16, 4),
+(176, 4, 17, 5),
+(177, 4, 18, 3),
+(178, 4, 19, 3),
+(179, 4, 20, 3),
+(180, 4, 21, 5),
+(181, 4, 22, 5),
+(182, 4, 23, 5),
+(183, 4, 24, 3),
+(184, 4, 25, 1),
+(185, 4, 26, 3),
+(186, 4, 27, 3),
+(187, 4, 28, 5),
+(188, 4, 29, 5),
+(189, 4, 30, 1),
+(190, 4, 31, 5),
+(191, 4, 32, 4),
+(192, 4, 33, 4),
+(193, 4, 34, 5),
+(194, 4, 35, 5),
+(195, 4, 36, 3),
+(196, 4, 37, 5),
+(197, 4, 38, 5),
+(198, 4, 39, 1),
+(199, 4, 40, 3),
+(200, 4, 41, 5),
+(201, 4, 42, 4),
+(202, 4, 43, 1),
+(203, 4, 44, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_users`
 --
 
@@ -119,6 +182,14 @@ ALTER TABLE `tb_test_questions`
   ADD PRIMARY KEY (`id_question`);
 
 --
+-- Indexes for table `tb_test_result`
+--
+ALTER TABLE `tb_test_result`
+  ADD PRIMARY KEY (`id_result`),
+  ADD KEY `fk_id_user` (`id_user`),
+  ADD KEY `fk_id_question` (`id_question`);
+
+--
 -- Indexes for table `tb_users`
 --
 ALTER TABLE `tb_users`
@@ -135,10 +206,27 @@ ALTER TABLE `tb_test_questions`
   MODIFY `id_question` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
+-- AUTO_INCREMENT for table `tb_test_result`
+--
+ALTER TABLE `tb_test_result`
+  MODIFY `id_result` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+
+--
 -- AUTO_INCREMENT for table `tb_users`
 --
 ALTER TABLE `tb_users`
   MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tb_test_result`
+--
+ALTER TABLE `tb_test_result`
+  ADD CONSTRAINT `fk_id_question` FOREIGN KEY (`id_question`) REFERENCES `tb_test_questions` (`id_question`),
+  ADD CONSTRAINT `fk_id_user` FOREIGN KEY (`id_user`) REFERENCES `tb_users` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
