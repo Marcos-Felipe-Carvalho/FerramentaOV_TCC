@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2022 at 04:56 PM
+-- Generation Time: Sep 07, 2022 at 08:02 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -20,6 +20,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `bd_ferramanta_ov`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_analysis_text`
+--
+
+CREATE TABLE `tb_analysis_text` (
+  `id_analysys_text` int(4) NOT NULL,
+  `id_user` int(4) NOT NULL,
+  `user_api` varchar(255) NOT NULL,
+  `agreeableness_level` varchar(60) NOT NULL,
+  `conscientiousness_level` varchar(60) NOT NULL,
+  `emotional_stability_level` varchar(60) NOT NULL,
+  `extraversion_level` varchar(60) NOT NULL,
+  `openness_level` varchar(60) NOT NULL,
+  `agreeableness_score` float(6,2) NOT NULL,
+  `conscientiousness_score` float(6,2) NOT NULL,
+  `emotional_stability_score` float(6,2) NOT NULL,
+  `extraversion_score` float(6,2) NOT NULL,
+  `openness_score` float(6,2) NOT NULL,
+  `about_me` varchar(3500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_analysis_text`
+--
+
+INSERT INTO `tb_analysis_text` (`id_analysys_text`, `id_user`, `user_api`, `agreeableness_level`, `conscientiousness_level`, `emotional_stability_level`, `extraversion_level`, `openness_level`, `agreeableness_score`, `conscientiousness_score`, `emotional_stability_score`, `extraversion_score`, `openness_score`, `about_me`) VALUES
+(17, 5, '799affd5f72079b43891', ' Somewhat Agreeable', 'Conscientious', 'Somewhat Balanced', 'Extroverted', 'Open', 5.20, 6.63, 6.53, 6.43, 7.56, ' Bianca, 22 years old, lives in Curitiba, keeps in dentistry lives with parents.He likes animals, especially dogs.Likes to play the piano, passionate about music.Likes to read series and romance books.He has a profile and is focused on numbers, obsessed with novelties and innovations (he seeks novelties in the international market), he always wants to qualify his time, he doesn\'t have much time and his schedule is open.He wants to increase his sales, generate more leadership without satisfactory results with marketing, increase his sales, be seen innovating in time strategies and as an authority.Its main obstacles are the lack of budget to invest in new solutions, the excess of tasks and the difficulty of time management, and the little manpower available to put in all the practices as their ideas.His main goal is to learn to play the guitar to reduce his stress by doing something he really enjoys;They have already learned but have not achieved results, they have difficulty learning with methodologies, they want to learn fast, because if they learn alone, they will not achieve in the short term and stressed;His instrument is the guitar, but he is also interested in guitar. His favorite genre is blues, also enjoying classic rock and jazz.He is a person with a strong personality, who likes to make decisions based on market data;From a family in the small town of Pitangueiras (interior of São Paulo), Clara\'s mother was a hairdresser and her humble father a collective bus driver.It was in 2007 that he opened Vitalcred, a financial services company that offered payments through booklets and credit cards.Thus, the dentist began to market this solution to several friends by profession.In 2008, he received a proposal from APCD (Paulista Association of Dental Surgeons) to popularize the system in São Paulo.');
 
 -- --------------------------------------------------------
 
@@ -169,11 +199,18 @@ INSERT INTO `tb_users` (`id_user`, `name`, `email`, `password`, `profile`) VALUE
 (3, 'Fagner Vidal', 'fagnerjlc@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional'),
 (4, 'Brenda Sophia Lima', 'brenda.lima@gmail.com', '0f5b6239d91a6ee58ce694ac1a0ecc7d', 'Entrevista/Orientado'),
 (5, 'Ana Rebeca Alves', 'ana.alves@gmail.com', '043e2df9912dc5c85f5cfb0b248b7e5b', 'Psicólogo/Orientador Vocacional'),
-(6, 'Nicole Sarah Gomes', 'nicole.gomes@gmail.com', 'f99aad5016f29389fa7b02f53741bc3e', 'Psicólogo/Orientador Vocacional');
+(6, 'Nicole Sarah Gomes', 'nicole.gomes@gmail.com', 'f99aad5016f29389fa7b02f53741bc3e', 'Psicólogo/Orientador Vocacional'),
+(7, 'Marcos Felipe Carvalho', 'mc2495070@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tb_analysis_text`
+--
+ALTER TABLE `tb_analysis_text`
+  ADD PRIMARY KEY (`id_analysys_text`);
 
 --
 -- Indexes for table `tb_test_questions`
@@ -200,6 +237,12 @@ ALTER TABLE `tb_users`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_analysis_text`
+--
+ALTER TABLE `tb_analysis_text`
+  MODIFY `id_analysys_text` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
@@ -215,7 +258,7 @@ ALTER TABLE `tb_test_result`
 -- AUTO_INCREMENT for table `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
