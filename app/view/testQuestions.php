@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+    <?php include"../view/navbar.php"?>
     <div class="container">
         <form action="../model/insert/insertResult.php" method="POST">
             <?php
