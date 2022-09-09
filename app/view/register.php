@@ -27,7 +27,7 @@
                 <select class="form-control" id="profileSelect" required name="profile">
                     <option disabled selected>Selecione o perfil de acesso</option>
                     <option>Psicólogo/Orientador Vocacional</option>
-                    <option>Entrevista/Orientado</option>
+                    <option>Entrevistado/Orientado</option>
                 </select>
             </div>
 

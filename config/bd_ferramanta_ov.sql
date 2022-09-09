@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2022 at 08:02 PM
+-- Generation Time: Sep 09, 2022 at 04:44 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -54,11 +54,35 @@ INSERT INTO `tb_analysis_text` (`id_analysys_text`, `id_user`, `user_api`, `agre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_category`
+--
+
+CREATE TABLE `tb_category` (
+  `id_category` int(4) NOT NULL,
+  `test` varchar(60) NOT NULL,
+  `category` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_category`
+--
+
+INSERT INTO `tb_category` (`id_category`, `test`, `category`) VALUES
+(1, 'Big Five', 'Extroversão'),
+(2, 'Big Five', 'Amabilidade'),
+(3, 'Big Five', 'Abertura a Experiências'),
+(4, 'Big Five', 'Conscienciosidade'),
+(5, 'Big Five', 'Neuroticismo');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_test_questions`
 --
 
 CREATE TABLE `tb_test_questions` (
   `id_question` int(4) NOT NULL,
+  `id_category` int(4) NOT NULL,
   `question` varchar(65) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -66,51 +90,51 @@ CREATE TABLE `tb_test_questions` (
 -- Dumping data for table `tb_test_questions`
 --
 
-INSERT INTO `tb_test_questions` (`id_question`, `question`) VALUES
-(1, 'É conversador, comunicativo'),
-(2, 'Tende a ser crítico com os outros'),
-(3, 'É minucioso e detalhista no trabalho'),
-(4, 'É depressivo, triste'),
-(5, 'É original, tem sempre novas ideias'),
-(6, 'É reservado'),
-(7, 'É prestativo e ajuda os outros'),
-(8, 'Pode ser um tanto descuidado'),
-(9, 'É relaxado, controla bem o stress'),
-(10, 'É curioso sobre muitas coisas diferentes'),
-(11, 'É cheio de energia'),
-(12, 'Começa discussões, disputas, com os outros'),
-(13, 'É um trabalhador de confiança'),
-(14, 'Fica tenso com frequência'),
-(15, 'É engenhoso, alguém que gosta de analisar profundamente as coisas'),
-(16, 'Gera muito entusiasmo'),
-(17, 'Tem capacidade de perdoar, perdoa facilmente'),
-(18, 'Tende a ser desorganizado'),
-(19, 'Preocupa-se muito com tudo'),
-(20, 'Tem uma imaginação fértil'),
-(21, 'Tende a ser quieto, calado'),
-(22, 'É geralmente confiável'),
-(23, 'Tende a ser preguiçoso'),
-(24, 'É emocionalmente estável, não se altera facilmente'),
-(25, 'É inventivo, criativo'),
-(26, 'É assertivo, não teme expressar o que sente'),
-(27, 'Às vezes é frio e distante'),
-(28, 'Insiste até concluir a tarefa ou o trabalho'),
-(29, 'É temperamental, muda de humor facilmente'),
-(30, 'Valoriza o artístico, o estético'),
-(31, 'É, às vezes, tímido e inibido'),
-(32, 'É amável, tem consideração pelos outros'),
-(33, 'Faz as coisas com eficiência'),
-(34, 'Mantém-se calmo nas situações de tensão'),
-(35, 'Prefere trabalho rotineiro'),
-(36, 'É sociável, extrovertido'),
-(37, 'É, às vezes, rude (grosseiro) com os outros'),
-(38, 'Faz planos e segue-os à risca'),
-(39, 'Fica nervoso facilmente'),
-(40, 'Gosta de refletir, brincar com as ideias'),
-(41, 'Tem poucos interesses artísticos'),
-(42, 'Gosta de cooperar com os outros'),
-(43, 'É facilmente distraído'),
-(44, 'É sofisticado em artes, música ou literatura ');
+INSERT INTO `tb_test_questions` (`id_question`, `id_category`, `question`) VALUES
+(1, 1, 'É conversador, comunicativo'),
+(2, 2, 'Tende a ser crítico com os outros'),
+(3, 4, 'É minucioso e detalhista no trabalho'),
+(4, 5, 'É depressivo, triste'),
+(5, 3, 'É original, tem sempre novas ideias'),
+(6, 1, 'É reservado'),
+(7, 2, 'É prestativo e ajuda os outros'),
+(8, 4, 'Pode ser um tanto descuidado'),
+(9, 5, 'É relaxado, controla bem o stress'),
+(10, 3, 'É curioso sobre muitas coisas diferentes'),
+(11, 1, 'É cheio de energia'),
+(12, 2, 'Começa discussões, disputas, com os outros'),
+(13, 4, 'É um trabalhador de confiança'),
+(14, 5, 'Fica tenso com frequência'),
+(15, 3, 'É engenhoso, alguém que gosta de analisar profundamente as coisas'),
+(16, 1, 'Gera muito entusiasmo'),
+(17, 2, 'Tem capacidade de perdoar, perdoa facilmente'),
+(18, 4, 'Tende a ser desorganizado'),
+(19, 5, 'Preocupa-se muito com tudo'),
+(20, 3, 'Tem uma imaginação fértil'),
+(21, 1, 'Tende a ser quieto, calado'),
+(22, 2, 'É geralmente confiável'),
+(23, 4, 'Tende a ser preguiçoso'),
+(24, 5, 'É emocionalmente estável, não se altera facilmente'),
+(25, 3, 'É inventivo, criativo'),
+(26, 1, 'É assertivo, não teme expressar o que sente'),
+(27, 2, 'Às vezes é frio e distante'),
+(28, 4, 'Insiste até concluir a tarefa ou o trabalho'),
+(29, 5, 'É temperamental, muda de humor facilmente'),
+(30, 3, 'Valoriza o artístico, o estético'),
+(31, 1, 'É, às vezes, tímido e inibido'),
+(32, 2, 'É amável, tem consideração pelos outros'),
+(33, 4, 'Faz as coisas com eficiência'),
+(34, 5, 'Mantém-se calmo nas situações de tensão'),
+(35, 3, 'Prefere trabalho rotineiro'),
+(36, 1, 'É sociável, extrovertido'),
+(37, 2, 'É, às vezes, rude (grosseiro) com os outros'),
+(38, 4, 'Faz planos e segue-os à risca'),
+(39, 5, 'Fica nervoso facilmente'),
+(40, 3, 'Gosta de refletir, brincar com as ideias'),
+(41, 3, 'Tem poucos interesses artísticos'),
+(42, 2, 'Gosta de cooperar com os outros'),
+(43, 4, 'É facilmente distraído'),
+(44, 3, 'É sofisticado em artes, música ou literatura ');
 
 -- --------------------------------------------------------
 
@@ -130,50 +154,50 @@ CREATE TABLE `tb_test_result` (
 --
 
 INSERT INTO `tb_test_result` (`id_result`, `id_user`, `id_question`, `result`) VALUES
-(160, 4, 1, 5),
-(161, 4, 2, 4),
-(162, 4, 3, 3),
-(163, 4, 4, 2),
-(164, 4, 5, 1),
-(165, 4, 6, 1),
-(166, 4, 7, 2),
-(167, 4, 8, 3),
-(168, 4, 9, 4),
-(169, 4, 10, 5),
-(170, 4, 11, 1),
-(171, 4, 12, 2),
-(172, 4, 13, 3),
-(173, 4, 14, 4),
-(174, 4, 15, 1),
-(175, 4, 16, 4),
-(176, 4, 17, 5),
-(177, 4, 18, 3),
-(178, 4, 19, 3),
-(179, 4, 20, 3),
-(180, 4, 21, 5),
-(181, 4, 22, 5),
-(182, 4, 23, 5),
-(183, 4, 24, 3),
-(184, 4, 25, 1),
-(185, 4, 26, 3),
-(186, 4, 27, 3),
-(187, 4, 28, 5),
-(188, 4, 29, 5),
-(189, 4, 30, 1),
-(190, 4, 31, 5),
-(191, 4, 32, 4),
-(192, 4, 33, 4),
-(193, 4, 34, 5),
-(194, 4, 35, 5),
-(195, 4, 36, 3),
-(196, 4, 37, 5),
-(197, 4, 38, 5),
-(198, 4, 39, 1),
-(199, 4, 40, 3),
-(200, 4, 41, 5),
-(201, 4, 42, 4),
-(202, 4, 43, 1),
-(203, 4, 44, 3);
+(204, 5, 1, 4),
+(205, 5, 2, 3),
+(206, 5, 3, 4),
+(207, 5, 4, 2),
+(208, 5, 5, 3),
+(209, 5, 6, 4),
+(210, 5, 7, 4),
+(211, 5, 8, 3),
+(212, 5, 9, 3),
+(213, 5, 10, 4),
+(214, 5, 11, 3),
+(215, 5, 12, 1),
+(216, 5, 13, 4),
+(217, 5, 14, 3),
+(218, 5, 15, 3),
+(219, 5, 16, 3),
+(220, 5, 17, 4),
+(221, 5, 18, 2),
+(222, 5, 19, 3),
+(223, 5, 20, 2),
+(224, 5, 21, 4),
+(225, 5, 22, 4),
+(226, 5, 23, 3),
+(227, 5, 24, 4),
+(228, 5, 25, 3),
+(229, 5, 26, 2),
+(230, 5, 27, 3),
+(231, 5, 28, 4),
+(232, 5, 29, 3),
+(233, 5, 30, 3),
+(234, 5, 31, 4),
+(235, 5, 32, 4),
+(236, 5, 33, 4),
+(237, 5, 34, 3),
+(238, 5, 35, 1),
+(239, 5, 36, 2),
+(240, 5, 37, 2),
+(241, 5, 38, 3),
+(242, 5, 39, 2),
+(243, 5, 40, 3),
+(244, 5, 41, 3),
+(245, 5, 42, 4),
+(246, 5, 43, 3),
+(247, 5, 44, 3);
 
 -- --------------------------------------------------------
 
@@ -197,10 +221,10 @@ INSERT INTO `tb_users` (`id_user`, `name`, `email`, `password`, `profile`) VALUE
 (1, 'Rafael Graciotto', 'rgraciotto@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional'),
 (2, 'Marcos Felipe Carvalho', 'marcos.felipe2001@outlook.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional'),
 (3, 'Fagner Vidal', 'fagnerjlc@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional'),
-(4, 'Brenda Sophia Lima', 'brenda.lima@gmail.com', '0f5b6239d91a6ee58ce694ac1a0ecc7d', 'Entrevista/Orientado'),
-(5, 'Ana Rebeca Alves', 'ana.alves@gmail.com', '043e2df9912dc5c85f5cfb0b248b7e5b', 'Psicólogo/Orientador Vocacional'),
-(6, 'Nicole Sarah Gomes', 'nicole.gomes@gmail.com', 'f99aad5016f29389fa7b02f53741bc3e', 'Psicólogo/Orientador Vocacional'),
-(7, 'Marcos Felipe Carvalho', 'mc2495070@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Psicólogo/Orientador Vocacional');
+(4, 'Brenda Sophia Lima', 'brenda.lima@gmail.com', '0f5b6239d91a6ee58ce694ac1a0ecc7d', 'Entrevistado/Orientado'),
+(5, 'Ana Rebeca Alves', 'ana.alves@gmail.com', '043e2df9912dc5c85f5cfb0b248b7e5b', 'Entrevistado/Orientado'),
+(6, 'Nicole Sarah Gomes', 'nicole.gomes@gmail.com', 'f99aad5016f29389fa7b02f53741bc3e', 'Entrevistado/Orientado'),
+(7, 'Carlos Almeida', 'carlos.almeida@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Entrevistado/Orientado');
 
 --
 -- Indexes for dumped tables
@@ -210,13 +234,21 @@ INSERT INTO `tb_users` (`id_user`, `name`, `email`, `password`, `profile`) VALUE
 -- Indexes for table `tb_analysis_text`
 --
 ALTER TABLE `tb_analysis_text`
-  ADD PRIMARY KEY (`id_analysys_text`);
+  ADD PRIMARY KEY (`id_analysys_text`),
+  ADD KEY `fk_id_user_analysis` (`id_user`);
+
+--
+-- Indexes for table `tb_category`
+--
+ALTER TABLE `tb_category`
+  ADD PRIMARY KEY (`id_category`);
 
 --
 -- Indexes for table `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
-  ADD PRIMARY KEY (`id_question`);
+  ADD PRIMARY KEY (`id_question`),
+  ADD KEY `fk_id_category` (`id_category`);
 
 --
 -- Indexes for table `tb_test_result`
@@ -243,6 +275,12 @@ ALTER TABLE `tb_analysis_text`
   MODIFY `id_analysys_text` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
+-- AUTO_INCREMENT for table `tb_category`
+--
+ALTER TABLE `tb_category`
+  MODIFY `id_category` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
@@ -252,7 +290,7 @@ ALTER TABLE `tb_test_questions`
 -- AUTO_INCREMENT for table `tb_test_result`
 --
 ALTER TABLE `tb_test_result`
-  MODIFY `id_result` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+  MODIFY `id_result` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
 
 --
 -- AUTO_INCREMENT for table `tb_users`
@@ -263,6 +301,18 @@ ALTER TABLE `tb_users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `tb_analysis_text`
+--
+ALTER TABLE `tb_analysis_text`
+  ADD CONSTRAINT `fk_id_user_analysis` FOREIGN KEY (`id_user`) REFERENCES `tb_users` (`id_user`);
+
+--
+-- Constraints for table `tb_test_questions`
+--
+ALTER TABLE `tb_test_questions`
+  ADD CONSTRAINT `fk_id_category` FOREIGN KEY (`id_category`) REFERENCES `tb_category` (`id_category`);
 
 --
 -- Constraints for table `tb_test_result`
