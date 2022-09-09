@@ -75,7 +75,7 @@ $compileConscientiousness = getCompileResult($_SESSION['id_user']);
             <div class="col-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Análise de personalidade baseado na redação</h5>
+                        <h5 class="card-title">Análise de personalidade baseado no questionário</h5>
                         <div class="chart" id="testResult" style="width: 530px; height: 300px;"></div>
                     </div>
                 </div>
