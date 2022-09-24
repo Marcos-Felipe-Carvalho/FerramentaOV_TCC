@@ -337,7 +337,7 @@ $compileConscientiousness = getCompileResult($_SESSION['id_user']);
         });
         google.charts.setOnLoadCallback(textAnalysis);
         google.charts.setOnLoadCallback(testResult);
-        
+
         function textAnalysis() {
             var data = google.visualization.arrayToDataTable([
                 ['Análise da Redação', 'Abertura à Experiência', 'Extroversão', 'Neuroticismo', 'Amabilidade', 'Conscienciosidade'],
@@ -384,7 +384,6 @@ $compileConscientiousness = getCompileResult($_SESSION['id_user']);
 
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
-
     </script>
 </body>
 

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 09, 2022 at 04:44 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.4
+-- Tempo de geração: 24/09/2022 às 17:25
+-- Versão do servidor: 10.4.24-MariaDB
+-- Versão do PHP: 8.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bd_ferramanta_ov`
+-- Banco de dados: `bd_ferramanta_ov`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_analysis_text`
+-- Estrutura para tabela `tb_analysis_text`
 --
 
 CREATE TABLE `tb_analysis_text` (
@@ -45,16 +45,18 @@ CREATE TABLE `tb_analysis_text` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_analysis_text`
+-- Despejando dados para a tabela `tb_analysis_text`
 --
 
 INSERT INTO `tb_analysis_text` (`id_analysys_text`, `id_user`, `user_api`, `agreeableness_level`, `conscientiousness_level`, `emotional_stability_level`, `extraversion_level`, `openness_level`, `agreeableness_score`, `conscientiousness_score`, `emotional_stability_score`, `extraversion_score`, `openness_score`, `about_me`) VALUES
-(17, 5, '799affd5f72079b43891', ' Somewhat Agreeable', 'Conscientious', 'Somewhat Balanced', 'Extroverted', 'Open', 5.20, 6.63, 6.53, 6.43, 7.56, ' Bianca, 22 years old, lives in Curitiba, keeps in dentistry lives with parents.He likes animals, especially dogs.Likes to play the piano, passionate about music.Likes to read series and romance books.He has a profile and is focused on numbers, obsessed with novelties and innovations (he seeks novelties in the international market), he always wants to qualify his time, he doesn\'t have much time and his schedule is open.He wants to increase his sales, generate more leadership without satisfactory results with marketing, increase his sales, be seen innovating in time strategies and as an authority.Its main obstacles are the lack of budget to invest in new solutions, the excess of tasks and the difficulty of time management, and the little manpower available to put in all the practices as their ideas.His main goal is to learn to play the guitar to reduce his stress by doing something he really enjoys;They have already learned but have not achieved results, they have difficulty learning with methodologies, they want to learn fast, because if they learn alone, they will not achieve in the short term and stressed;His instrument is the guitar, but he is also interested in guitar. His favorite genre is blues, also enjoying classic rock and jazz.He is a person with a strong personality, who likes to make decisions based on market data;From a family in the small town of Pitangueiras (interior of São Paulo), Clara\'s mother was a hairdresser and her humble father a collective bus driver.It was in 2007 that he opened Vitalcred, a financial services company that offered payments through booklets and credit cards.Thus, the dentist began to market this solution to several friends by profession.In 2008, he received a proposal from APCD (Paulista Association of Dental Surgeons) to popularize the system in São Paulo.');
+(17, 5, '799affd5f72079b43891', ' Somewhat Agreeable', 'Conscientious', 'Somewhat Balanced', 'Extroverted', 'Open', 5.20, 6.63, 6.53, 6.43, 7.56, ' Bianca, 22 years old, lives in Curitiba, keeps in dentistry lives with parents.He likes animals, especially dogs.Likes to play the piano, passionate about music.Likes to read series and romance books.He has a profile and is focused on numbers, obsessed with novelties and innovations (he seeks novelties in the international market), he always wants to qualify his time, he doesn\'t have much time and his schedule is open.He wants to increase his sales, generate more leadership without satisfactory results with marketing, increase his sales, be seen innovating in time strategies and as an authority.Its main obstacles are the lack of budget to invest in new solutions, the excess of tasks and the difficulty of time management, and the little manpower available to put in all the practices as their ideas.His main goal is to learn to play the guitar to reduce his stress by doing something he really enjoys;They have already learned but have not achieved results, they have difficulty learning with methodologies, they want to learn fast, because if they learn alone, they will not achieve in the short term and stressed;His instrument is the guitar, but he is also interested in guitar. His favorite genre is blues, also enjoying classic rock and jazz.He is a person with a strong personality, who likes to make decisions based on market data;From a family in the small town of Pitangueiras (interior of São Paulo), Clara\'s mother was a hairdresser and her humble father a collective bus driver.It was in 2007 that he opened Vitalcred, a financial services company that offered payments through booklets and credit cards.Thus, the dentist began to market this solution to several friends by profession.In 2008, he received a proposal from APCD (Paulista Association of Dental Surgeons) to popularize the system in São Paulo.'),
+(18, 8, '524905b17bf6a31d4733', ' Disagreeable', 'Very Conscientious', 'Balanced', 'Somewhat Introverted', 'Open', 2.97, 8.05, 7.90, 5.05, 7.79, 'Gustavo está cursando o terceiro ano do ensino médio, preparando-se para o vestibular. Ele ainda tem dúvidas sobre o curso ideal para a carreira que deseja seguir e, dentro dessas variáveis, qual a melhor opção para ele, analisando a concorrência local, regional ou nacional.Gustavo mora em Belo Horizonte (MG), tem 17 anos e atualmente cursa o terceiro ano do ensino médio;Seu principal objetivo é validar a carreira que deseja seguir e escolher o curso de graduação que mais se adapta à sua realidade;Ele está procurando uma Instituição de Ensino Superior (faculdade ou universidade);Está com dificuldades em validar sua orientação vocacional;Também possui dificuldade no entendimento de qual currículo, conteúdo programático e método de ensino se adequa melhor ao seu perfil e interesse;Ele possui condição de investir até R$ 1.000 por mês no curso de graduação e são seus pais que assumirão o investimento;Seus cursos de interesse no momento são administração e economia — seus pais possuem uma empresa familiar, convivendo com métodos de gestão no dia a dia, e por isso ele acredita ter perfil para esses cursos.'),
+(19, 9, 'a1c7adbac7c423fabc0f', ' Somewhat Agreeable', 'Easygoing', 'Very Sensitive', 'Very Extroverted', 'Closed', 5.83, 2.76, 3.13, 9.80, 3.65, 'Extrovertida sim e muito, desconfiada e orgulhosa por autodefesa. Sonhadora e alegre por natureza. Melancólica por tendência. Contraditória e indecisa muitas vezes. Persistente no que anseio. Teimosa no que penso. Prisioneira de minha própria ânsia de liberdade! Sou honesta, justa e responsável. Mais do que beleza, prezo a essência, o bom humor e os princípios.Choro do nada e sorrio sem motivos. Mas gosto quando desabafo em lágrimas, me sinto forte, corajosa. Ao contrário do que todos pensam, que a lágrima é sinal de fraqueza. Ruim é jogarmos a raiva, a tristeza nos outros; brigando, gritando e machucando. Como todo ser humano, tenho meus momentos de crises, de descontrole emocional, mas nada que me faça perder a cabeça. Por eu ser uma pessoa extremamente extrovertida, quando fico séria, todos acham que estou triste. As vezes pode até ser verdade, mas as vezes a minha risada está mais pedindo socorro do que meu silêncio. Sou diversas vezes mal compreendida.Todos nós temos problemas mesmo. Quando estou a ajudar alguém, sempre me envolvo, não consigo ficar de longe. Me coloco no lugar do outro para entender suas ações e tentar justificar as atitudes.Não deixo nada nem ninguém passar por cima de mim. Sou a pessoa mais legal do mundo, mas só com quem merece. Se você não merece, eu posso ser a pessoa que você não vai querer nunca ver na frente. Afinal, cada um tem a Débora que merece.Tenho meus momentos off, momentos aquele que não quero ver ninguém. E esse momento me torna uma pessoa super chata.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_category`
+-- Estrutura para tabela `tb_category`
 --
 
 CREATE TABLE `tb_category` (
@@ -64,7 +66,7 @@ CREATE TABLE `tb_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_category`
+-- Despejando dados para a tabela `tb_category`
 --
 
 INSERT INTO `tb_category` (`id_category`, `test`, `category`) VALUES
@@ -77,7 +79,7 @@ INSERT INTO `tb_category` (`id_category`, `test`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_test_questions`
+-- Estrutura para tabela `tb_test_questions`
 --
 
 CREATE TABLE `tb_test_questions` (
@@ -87,7 +89,7 @@ CREATE TABLE `tb_test_questions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_test_questions`
+-- Despejando dados para a tabela `tb_test_questions`
 --
 
 INSERT INTO `tb_test_questions` (`id_question`, `id_category`, `question`) VALUES
@@ -139,7 +141,7 @@ INSERT INTO `tb_test_questions` (`id_question`, `id_category`, `question`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_test_result`
+-- Estrutura para tabela `tb_test_result`
 --
 
 CREATE TABLE `tb_test_result` (
@@ -150,7 +152,7 @@ CREATE TABLE `tb_test_result` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_test_result`
+-- Despejando dados para a tabela `tb_test_result`
 --
 
 INSERT INTO `tb_test_result` (`id_result`, `id_user`, `id_question`, `result`) VALUES
@@ -197,12 +199,100 @@ INSERT INTO `tb_test_result` (`id_result`, `id_user`, `id_question`, `result`) V
 (244, 5, 41, 3),
 (245, 5, 42, 4),
 (246, 5, 43, 3),
-(247, 5, 44, 3);
+(247, 5, 44, 3),
+(248, 9, 1, 2),
+(249, 9, 2, 2),
+(250, 9, 3, 3),
+(251, 9, 4, 4),
+(252, 9, 5, 5),
+(253, 9, 6, 5),
+(254, 9, 7, 4),
+(255, 9, 8, 3),
+(256, 9, 9, 2),
+(257, 9, 10, 1),
+(258, 9, 11, 1),
+(259, 9, 12, 2),
+(260, 9, 13, 3),
+(261, 9, 14, 4),
+(262, 9, 15, 5),
+(263, 9, 16, 1),
+(264, 9, 17, 2),
+(265, 9, 18, 3),
+(266, 9, 19, 4),
+(267, 9, 20, 5),
+(268, 9, 21, 5),
+(269, 9, 22, 3),
+(270, 9, 23, 1),
+(271, 9, 24, 1),
+(272, 9, 25, 1),
+(273, 9, 26, 3),
+(274, 9, 27, 1),
+(275, 9, 28, 3),
+(276, 9, 29, 3),
+(277, 9, 30, 5),
+(278, 9, 31, 5),
+(279, 9, 32, 1),
+(280, 9, 33, 5),
+(281, 9, 34, 3),
+(282, 9, 35, 1),
+(283, 9, 36, 1),
+(284, 9, 37, 4),
+(285, 9, 38, 5),
+(286, 9, 39, 5),
+(287, 9, 40, 4),
+(288, 9, 41, 1),
+(289, 9, 42, 3),
+(290, 9, 43, 5),
+(291, 9, 44, 5),
+(292, 8, 1, 1),
+(293, 8, 2, 3),
+(294, 8, 3, 1),
+(295, 8, 4, 1),
+(296, 8, 5, 5),
+(297, 8, 6, 3),
+(298, 8, 7, 5),
+(299, 8, 8, 5),
+(300, 8, 9, 5),
+(301, 8, 10, 1),
+(302, 8, 11, 3),
+(303, 8, 12, 1),
+(304, 8, 13, 5),
+(305, 8, 14, 5),
+(306, 8, 15, 1),
+(307, 8, 16, 3),
+(308, 8, 17, 5),
+(309, 8, 18, 5),
+(310, 8, 19, 1),
+(311, 8, 20, 1),
+(312, 8, 21, 5),
+(313, 8, 22, 5),
+(314, 8, 23, 2),
+(315, 8, 24, 5),
+(316, 8, 25, 5),
+(317, 8, 26, 5),
+(318, 8, 27, 1),
+(319, 8, 28, 1),
+(320, 8, 29, 5),
+(321, 8, 30, 5),
+(322, 8, 31, 1),
+(323, 8, 32, 2),
+(324, 8, 33, 5),
+(325, 8, 34, 5),
+(326, 8, 35, 5),
+(327, 8, 36, 1),
+(328, 8, 37, 2),
+(329, 8, 38, 5),
+(330, 8, 39, 1),
+(331, 8, 40, 3),
+(332, 8, 41, 5),
+(333, 8, 42, 5),
+(334, 8, 43, 5),
+(335, 8, 44, 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_users`
+-- Estrutura para tabela `tb_users`
 --
 
 CREATE TABLE `tb_users` (
@@ -214,7 +304,7 @@ CREATE TABLE `tb_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_users`
+-- Despejando dados para a tabela `tb_users`
 --
 
 INSERT INTO `tb_users` (`id_user`, `name`, `email`, `password`, `profile`) VALUES
@@ -224,34 +314,36 @@ INSERT INTO `tb_users` (`id_user`, `name`, `email`, `password`, `profile`) VALUE
 (4, 'Brenda Sophia Lima', 'brenda.lima@gmail.com', '0f5b6239d91a6ee58ce694ac1a0ecc7d', 'Entrevistado/Orientado'),
 (5, 'Ana Rebeca Alves', 'ana.alves@gmail.com', '043e2df9912dc5c85f5cfb0b248b7e5b', 'Entrevistado/Orientado'),
 (6, 'Nicole Sarah Gomes', 'nicole.gomes@gmail.com', 'f99aad5016f29389fa7b02f53741bc3e', 'Entrevistado/Orientado'),
-(7, 'Carlos Almeida', 'carlos.almeida@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Entrevistado/Orientado');
+(7, 'Carlos Almeida', 'carlos.almeida@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Entrevistado/Orientado'),
+(8, 'Gustavo Silva', 'gustavo.silva@gmail.com', '592f39b1a47166f063630eb7342d4cb8', 'Entrevistado/Orientado'),
+(9, 'Vitoria Almeira', 'vitoria.almeida@gmail.com', 'a843104510d80f3cf736df15b6c149a2', 'Entrevistado/Orientado');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `tb_analysis_text`
+-- Índices de tabela `tb_analysis_text`
 --
 ALTER TABLE `tb_analysis_text`
   ADD PRIMARY KEY (`id_analysys_text`),
   ADD KEY `fk_id_user_analysis` (`id_user`);
 
 --
--- Indexes for table `tb_category`
+-- Índices de tabela `tb_category`
 --
 ALTER TABLE `tb_category`
   ADD PRIMARY KEY (`id_category`);
 
 --
--- Indexes for table `tb_test_questions`
+-- Índices de tabela `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
   ADD PRIMARY KEY (`id_question`),
   ADD KEY `fk_id_category` (`id_category`);
 
 --
--- Indexes for table `tb_test_result`
+-- Índices de tabela `tb_test_result`
 --
 ALTER TABLE `tb_test_result`
   ADD PRIMARY KEY (`id_result`),
@@ -259,63 +351,63 @@ ALTER TABLE `tb_test_result`
   ADD KEY `fk_id_question` (`id_question`);
 
 --
--- Indexes for table `tb_users`
+-- Índices de tabela `tb_users`
 --
 ALTER TABLE `tb_users`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `tb_analysis_text`
+-- AUTO_INCREMENT de tabela `tb_analysis_text`
 --
 ALTER TABLE `tb_analysis_text`
-  MODIFY `id_analysys_text` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_analysys_text` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `tb_category`
+-- AUTO_INCREMENT de tabela `tb_category`
 --
 ALTER TABLE `tb_category`
   MODIFY `id_category` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_test_questions`
+-- AUTO_INCREMENT de tabela `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
   MODIFY `id_question` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `tb_test_result`
+-- AUTO_INCREMENT de tabela `tb_test_result`
 --
 ALTER TABLE `tb_test_result`
-  MODIFY `id_result` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
+  MODIFY `id_result` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=336;
 
 --
--- AUTO_INCREMENT for table `tb_users`
+-- AUTO_INCREMENT de tabela `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Restrições para tabelas despejadas
 --
 
 --
--- Constraints for table `tb_analysis_text`
+-- Restrições para tabelas `tb_analysis_text`
 --
 ALTER TABLE `tb_analysis_text`
   ADD CONSTRAINT `fk_id_user_analysis` FOREIGN KEY (`id_user`) REFERENCES `tb_users` (`id_user`);
 
 --
--- Constraints for table `tb_test_questions`
+-- Restrições para tabelas `tb_test_questions`
 --
 ALTER TABLE `tb_test_questions`
   ADD CONSTRAINT `fk_id_category` FOREIGN KEY (`id_category`) REFERENCES `tb_category` (`id_category`);
 
 --
--- Constraints for table `tb_test_result`
+-- Restrições para tabelas `tb_test_result`
 --
 ALTER TABLE `tb_test_result`
   ADD CONSTRAINT `fk_id_question` FOREIGN KEY (`id_question`) REFERENCES `tb_test_questions` (`id_question`),

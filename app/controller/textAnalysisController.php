@@ -17,7 +17,14 @@
     }
 
     function getAnalysisResult($result){
-        $sql = "SELECT ta.agreeableness_score ,ta.conscientiousness_score ,ta.emotional_stability_score ,ta.extraversion_score ,ta.openness_score FROM tb_analysis_text ta WHERE id_user = ?";
+        $sql = "SELECT 
+        SUM(ta.agreeableness_score)/2 agreeableness_score,
+        SUM(ta.conscientiousness_score)/2 conscientiousness_score,
+        SUM(ta.emotional_stability_score)/2 emotional_stability_score,
+        SUM(ta.extraversion_score)/2 extraversion_score,
+        SUM(ta.openness_score)/2 openness_score
+     FROM 
+         tb_analysis_text ta WHERE id_user = ?";
         $infoResult = connect() -> prepare($sql);
         $infoResult -> execute($result);
         return $infoResult;

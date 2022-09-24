@@ -17,9 +17,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="./textAnalysis.php">Redação</a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link" href="#">Resultados</a>
-            </li>
+            </li>-->
             <li class="nav-item">
                 <a class="nav-link btn btn-outline-success" href="../model/authentication/logout.php">Sair</a>
             </li>
