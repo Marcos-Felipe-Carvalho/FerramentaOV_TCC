@@ -31,7 +31,7 @@
                 INNER JOIN tb_test_questions tq ON tr.id_question = tq.id_question
                 INNER JOIN tb_category tc ON tc.id_category = tq.id_category
             WHERE tc.category = "Extroversão"
-            AND tu.id_user = 9
+            AND tu.id_user = ?
         ) extroversao
         INNER JOIN(
             SELECT tu.id_user,
@@ -49,7 +49,7 @@
                 INNER JOIN tb_test_questions tq ON tr.id_question = tq.id_question
                 INNER JOIN tb_category tc ON tc.id_category = tq.id_category
             WHERE tc.category = "Amabilidade"
-            AND tu.id_user = 9
+            AND tu.id_user = ?
         ) amabilidade ON extroversao.id_user = amabilidade.id_user
         INNER JOIN (
             SELECT tu.id_user,
@@ -65,7 +65,7 @@
                 INNER JOIN tb_test_questions tq ON tr.id_question = tq.id_question
                 INNER JOIN tb_category tc ON tc.id_category = tq.id_category
             WHERE tc.category = "Abertura a Experiências"
-            AND tu.id_user = 9
+            AND tu.id_user = ?
         ) abertura_experiencias ON amabilidade.id_user = abertura_experiencias.id_user
         INNER JOIN (
             SELECT tu.id_user,
@@ -83,7 +83,7 @@
                 INNER JOIN tb_test_questions tq ON tr.id_question = tq.id_question
                 INNER JOIN tb_category tc ON tc.id_category = tq.id_category
             WHERE tc.category = "Conscienciosidade"
-            AND tu.id_user = 9
+            AND tu.id_user = ?
         ) conscienciosidade ON abertura_experiencias.id_user = conscienciosidade.id_user
         INNER JOIN (
             SELECT tu.id_user,
@@ -102,15 +102,15 @@
                 INNER JOIN tb_test_questions tq ON tr.id_question = tq.id_question
                 INNER JOIN tb_category tc ON tc.id_category = tq.id_category
             WHERE tc.category = "Neuroticismo"
-            AND tu.id_user = 9
+            AND tu.id_user = ?
         ) neuroticismo on conscienciosidade.id_user = neuroticismo.id_user
 
 
     WHERE
-        neuroticismo.id_user = 9
+        neuroticismo.id_user = ?
                     ';
                     $infoResult = connect()->prepare($sql);
-                            $infoResult->execute(/*array($idUser,$idUser,$idUser,$idUser,$idUser,$idUser,$idUser,$idUser)*/);
+                            $infoResult->execute(array($idUser,$idUser,$idUser,$idUser,$idUser,$idUser));
                     disconnect(); //Encerra a conexão com o banco de dados
                     return $infoResult;
         

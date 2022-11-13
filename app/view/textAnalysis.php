@@ -69,7 +69,7 @@ session_start();
             const baseUrl = "https://api.humantic.ai/v1/user-profile/create"
 
             // API Key: required, Get the api key from environment variable or substitute it directly
-            const apiKey = "chrexec_2e26433b3d70baecab2249442a80ec15"; //document.getElementById("apikey-id").value; // <Your API Key>
+            const apiKey = "chrexec_f939e9bf2be9d26406ab7420d1d9ccc4"; //document.getElementById("apikey-id").value; // <Your API Key>
 
             // Analysis ID: required; User profile link from LinkedIn or, User Email ID
             // or, for document or text, use any unique identifier. We suggest using a value that helps you identify the analysis easily.
@@ -96,7 +96,7 @@ session_start();
 
             //console.log(settings);
             $.ajax(settings).done(function(response) {
-                console.log(response.results.userid);
+                console.log(response.results);
                 getAnalysisForDocument(response.results.userid);
                 $("#demo").append("Output logged into Console<br\>")
             });
@@ -108,7 +108,7 @@ session_start();
             const baseUrl = "https://api.humantic.ai/v1/user-profile/"
 
             // API Key: required, Get the api key from environment variable or substitute it directly
-            const apiKey = "chrexec_2e26433b3d70baecab2249442a80ec15"; //document.getElementById("apikey-id").value; // <Your API Key>
+            const apiKey = "chrexec_f939e9bf2be9d26406ab7420d1d9ccc4"; //document.getElementById("apikey-id").value; // <Your API Key>
 
             const url = `${baseUrl}?apikey=${apiKey}&id=${userId}`
 
